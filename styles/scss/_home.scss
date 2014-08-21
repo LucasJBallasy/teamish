@@ -1,34 +1,63 @@
 #HomeContainer{
 	margin:50px 0 0 210px;
-	width:100%;
     max-width:1400px;
     box-sizing:border-box;
 
     .half{
     	text-align:center;
-    	display:inline-block;
-    	width:49.5%;
+    	width:48%;
     	background-color:yellow;
     	background-image:url('../images/barrelmoments01.jpg');
     	background-size:cover;
     	background-position:center;
     	position:relative;
+    	box-sizing: border-box;
+
+    	&.left{
+    		margin: 0 1% 0 0;
+    		float:left;
+    	}
+
+    	&.right{
+    		margin: 100px 0 0 1%;
+    		float:right;
+    	}
 
     	h1{
-    		z-index:1;
+    		z-index:2;
     		position:absolute;
-    		top: 50%;
+    		top: 40%;
 			left: 0;
 			right: 0;
+			color:#fff;
+    	}
+
+    	&:before{
+    		z-index:3;
+    		position:absolute;
+    		top:20px;
+    		bottom:20px;
+    		right:20px;
+    		left:20px;
+    		content:'';
+    		border:2px #fff solid;
+    	}
+
+    	&:after{
+    		z-index:1;
+    		position:absolute;
+    		top:0;
+    		bottom:0;
+    		right:0;
+    		left:0;
+    		content:'';
+    		background-color:$brand-color;
+    		opacity:.85;
     	}
     }
 
     span{
 		display:block;
 		padding-top:100%;
-	}
-
-	.down{
-		margin-top:100px;
 	}
  }

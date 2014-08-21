@@ -46,7 +46,7 @@ h1, h2, h3, h4, li, p, a, .h1, .h2, .h3, .h4, .h5, .p {
 a {
   text-decoration: none; }
 
-h1, h2, h3, h4, li, a, .h1, .h2, .h3, .h4 {
+h1, h2, h3, h4, h5, li, a, .h1, .h2, .h3, .h4, .h5 {
   font-family: 'Inconsolata', sans-serif;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -82,6 +82,10 @@ h4, .h4 {
   @media screen and (max-width: 640px) {
     h4, .h4 {
       font-size: 20px; } }
+
+h5, .h5 {
+  font-size: 55px;
+  line-height: 1em; }
 
 p, .p {
   font-family: 'Source Sans Pro', sans-serif;
@@ -160,34 +164,57 @@ p, .p {
 
 #HomeContainer {
   margin: 50px 0 0 210px;
-  width: 100%;
   max-width: 1400px;
   -moz-box-sizing: border-box;
        box-sizing: border-box; }
   #HomeContainer .half {
     text-align: center;
-    display: inline-block;
-    width: 49.5%;
+    width: 48%;
     background-color: yellow;
     background-image: url('../images/barrelmoments01.jpg');
     background-size: cover;
     background-position: center;
-    position: relative; }
+    position: relative;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box; }
+    #HomeContainer .half.left {
+      margin: 0 1% 0 0;
+      float: left; }
+    #HomeContainer .half.right {
+      margin: 100px 0 0 1%;
+      float: right; }
     #HomeContainer .half h1 {
+      z-index: 2;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      right: 0;
+      color: #fff; }
+    #HomeContainer .half:before {
+      z-index: 3;
+      position: absolute;
+      top: 20px;
+      bottom: 20px;
+      right: 20px;
+      left: 20px;
+      content: '';
+      border: 2px #fff solid; }
+    #HomeContainer .half:after {
       z-index: 1;
       position: absolute;
-      top: 50%;
+      top: 0;
+      bottom: 0;
+      right: 0;
       left: 0;
-      right: 0; }
+      content: '';
+      background-color: #ff3f3d;
+      opacity: 0.85; }
   #HomeContainer span {
     display: block;
     padding-top: 100%; }
-  #HomeContainer .down {
-    margin-top: 100px; }
 
 #ProductListing {
   margin: 50px 0 0 210px;
-  width: 100%;
   display: inline-block;
   max-width: 1400px; }
 
@@ -328,9 +355,6 @@ p, .p {
   width: 100%;
   display: inline-block;
   max-width: 1400px; }
-  #BorrowList h1.big {
-    margin-bottom: 15px;
-    font-size: 60px; }
 
 .accordion {
   border-bottom: 2px #ff3f3d solid;

@@ -1,4 +1,4 @@
-h1, h2, h3, h4, li, a, .h1, .h2, .h3, .h4{
+h1, h2, h3, h4, h5, li, a, .h1, .h2, .h3, .h4, .h5{
 	font-family: 'Inconsolata', sans-serif;
 	font-weight:700;
 	letter-spacing:.05em;
@@ -43,6 +43,11 @@ h4, .h4 {
 	@media screen and (max-width: $break-5) {
 		font-size:20px;
 	}
+}
+
+h5, .h5{
+	font-size: 55px;
+	line-height:1em;
 }
 
 p, .p {
