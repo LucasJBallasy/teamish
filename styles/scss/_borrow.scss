@@ -1,0 +1,174 @@
+#BorrowList{
+	margin:50px 0 0 210px;
+	width:100%;
+    display:inline-block;
+    max-width:1400px;
+
+    h1.big{
+    	margin-bottom:15px;
+    	font-size:60px;
+    }
+}
+
+#Listing{
+}
+
+.accordion {
+	border-bottom: 2px $brand-color solid; 
+	margin:65px 0;
+
+	dt{
+		border-top: 2px $brand-color solid; 
+		background-size:cover;
+		background-position:center;
+		overflow:auto;
+		position:relative;
+
+		a { 
+			display:block;
+			padding: 50px 0;
+			min-height:70px;
+			transition:background-color .15s ease;
+			transition: .5s ease;
+
+			@media screen and (max-width: $break-5) {
+				padding-bottom:35px;
+			}
+
+			@media screen and (max-width: $break-6) {
+				padding-bottom:30px;
+			}
+
+			&.red{
+				background-color:$brand-color;
+
+				&:hover{
+					padding:50px 0;
+				}
+
+				.h1, .h2{
+					color:#fff;
+				}
+			}
+
+			&:hover{
+				background-color:$brand-color;
+				padding:60px 0;
+
+				.h1, .h2, h3{
+					color:#fff;
+				}
+			}
+		}
+
+		.info{
+			z-index:2;
+			position:absolute;
+			left:$align;
+			right:$align;
+			transition:opacity 1s ease;
+
+			@media screen and (max-width: $break-4) {
+  				left:$align2;
+				right:$align2;
+  			}
+
+  			@media screen and (max-width: $break-5) {
+  				text-align:center;
+  				left:0;
+				right:0;
+  			}
+
+
+			&.dim{
+				opacity:.4;
+			}
+
+			h1, h2{
+				text-transform:capitalize;
+			}
+
+			h2{
+				float:left;
+			}
+
+			h3{	
+				float:right;
+				position:relative;
+				margin-top:5px;
+				font-size:40px;
+				transform:rotate(0);
+				transition:transform .5s ease;
+				text-align:center;
+				height:40px;
+				width:40px;
+
+				@media screen and (max-width: $break-3) {
+					margin-top:15px;
+		  		}
+
+		  		@media screen and (max-width: $break-5) {
+					padding:0;
+		  		}
+
+				&.flip{
+					transform:rotate(180deg);
+					color:#fff;
+				}
+			}
+
+			h2, h3{
+				@media screen and (max-width: $break-5) {
+					float:none;
+				}
+			}
+		}
+	}
+
+  	dd{
+  		position:relative;
+  		padding:0 $align 30px;
+
+  		&.red{
+			background-color:$brand-color;
+
+			h1, p{
+	  			color:#fff;
+	  		}
+		}
+
+  		@media screen and (max-width: $break-4) {
+  			padding: 15px 0 0;
+  		}
+
+  		@media screen and (max-width: $break-5) {
+  			text-align:center;
+  		}
+
+  		h1, p{
+  			color:$brand-color;
+  		}
+
+     	p{	
+     		margin:5px 0 0;
+			width:50%;
+
+			@media screen and (max-width: $break-4) {
+				margin: 0 $align2 30px;
+			}
+
+			@media screen and (max-width: $break-5) {
+				margin:0 auto 30px;
+				width:90%;
+			}
+		}
+
+		.btn2{
+			margin-top:25px;
+		}
+
+		&:last-of-type {
+			position: relative;;
+		}
+  	}
+}

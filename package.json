@@ -1,0 +1,13 @@
+{
+  "name": "bike-ny",
+  "version": "1.0.0",
+  "author": "Barrel",
+  "devDependencies": {
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^0.6.0",
+    "grunt": "^0.4.5",
+    "grunt-sass": "^0.14.0",
+    "grunt-autoprefixer": "^1.0.0",
+    "grunt-sftp-deploy": "^0.2.1"
+  }
+}

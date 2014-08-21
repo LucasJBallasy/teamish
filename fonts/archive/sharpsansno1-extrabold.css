@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'SharpSansNo1Extrabold';
+    src: url('sharpsansno1-extrabold.eot');
+    src: url('sharpsansno1-extrabold.eot') format('embedded-opentype'),
+         url('sharpsansno1-extrabold.woff') format('woff'),
+         url('sharpsansno1-extrabold.ttf') format('truetype'),
+         url('sharpsansno1-extrabold.svg#SharpSansNo1Extrabold') format('svg');
+}

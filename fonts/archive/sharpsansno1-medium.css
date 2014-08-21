@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'SharpSansNo1Medium';
+    src: url('sharpsansno1-medium.eot');
+    src: url('sharpsansno1-medium.eot') format('embedded-opentype'),
+         url('sharpsansno1-medium.woff') format('woff'),
+         url('sharpsansno1-medium.ttf') format('truetype'),
+         url('sharpsansno1-medium.svg#SharpSansNo1Medium') format('svg');
+}

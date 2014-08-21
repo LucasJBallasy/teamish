@@ -1,0 +1,36 @@
+/*Colors*/
+
+$brand-color: #ff3f3d;
+$color-grey:#666869;
+$color-green:#e77154;
+
+
+/*Breaks*/
+
+$break-1:1440px;
+$break-2:1024px;
+$break-3:980px;
+$break-4:768px;
+$break-5:640px;
+$break-6:450px;
+$break-7:320px;
+
+$align:40px;
+$align2:20px;
+
+
+/*Mixins*/
+
+@mixin h5styles{
+	font-family: SharpSansMedium, sans-serif;
+	font-size: 13px;
+	line-height: 1.45;
+}
+
+@mixin transition($values){
+	transition:$values;
+	-ms-transition:$values;
+	-moz-transition:$values;
+	-webkit-transition:$values;
+	-o-transition:$values;
+}
