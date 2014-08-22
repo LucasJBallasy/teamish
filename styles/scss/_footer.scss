@@ -1,131 +1,25 @@
 #Footer{
-	background-color:$color-grey;
-	padding: $align 0 60px;
+	margin:50px 0 0;
+	background-color:$brand-color;
+	padding: $align 0 $align;
 	overflow:auto;
 	text-align:center;
 	position:relative;
 
-	@media screen and (max-width: $break-3){
-		padding: $align $align2;
-	}
-
-
-	h1, p, a, ul{
-		@include h5styles;
-	}
-
-	p, li{
-		line-height:1.65em;
-
-		@media screen and (max-width: $break-6){
-			line-height:1.8em;
-		}
-	}
-
-	li, img{
-		transition:opacity .05s linear;
+	img{
+		width:50px;
+		transition:1s ease;
 
 		&:hover{
-			opacity:.5;
-		}
-	}
-	
-	.h3, h1{
-		margin: 0 0 15px;
-	}
-
-	h1{	
-		border-top:2px #fff solid;
-		padding:10px 0 0;
-
-		@media screen and (max-width: $break-6){
-			display:inline-block;
-			padding-bottom:5px;
-			border-top:none;
-			border-bottom:2px #fff solid;
-			border-width:auto;
+			transform:rotate(360deg);
 		}
 	}
 
-	.column{
-		vertical-align: top;
-		box-sizing:border-box;
-	}
+	h1{
+		color:#fff;
 
-	.center{
-		width:760px;
-		margin: 0 auto;
-		display:inline-block;
-		height:150px;
-
-		@media screen and (max-width: 1200px){
-			margin:50px 0;
-			width:100%;
-			box-sizing:border-box;
-		}
-
-		@media screen and (max-width: $break-4){
-			height:300px;
-		}
-
-		@media screen and (max-width: $break-6){
-			height:auto;
-		}
-
-		.inner{ 
-			padding: 0 $align2 0;
-			width: 25%;
-			text-align:left;
-			height: 100px;
-			float:left;
-
-			@media screen and (max-width: $break-4){
-				height:150px;
-				margin: 0 0 20px;
-				width: 50%;
-			}
-
-			@media screen and (max-width: $break-6){
-				padding:0;
-				width:100%;
-				text-align:center;
-				height:auto;
-			}
-		}
-	}
-
-	.left{
-		float:left;
-		position:absolute;
-		top:$align;
-		left:$align;
-
-		@media screen and (max-width: 1200px){
-			position:relative;
-			top:0;
-			left:0;
-			float:none;
-			width:100%;
-		}
-
-	}
-
-	.right{
-		float:right;
-		position:absolute;
-		top:$align;
-		right:$align;
-
-		@media screen and (max-width: 1200px){
-			position:relative;
-			top:0;
-			right:0;
-			float:none;
-			width:100%;
-		}
-
-		img{	
-			width:120px;
+		.copyright{
+			font-size:20px;
 		}
 	}
 }

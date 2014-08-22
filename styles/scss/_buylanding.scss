@@ -1,12 +1,13 @@
 #BuyList{
 	width:100%;
     display:inline-block;
-    margin:50px 0 0 230px;
+    margin:50px 0 25px 230px;
   	max-width:1300px;
 }
 
 #ProductGrid{
 	margin-top:65px;
+	overflow:auto;
 }
 
 .saleproduct{
@@ -96,3 +97,9 @@
 		transition:.5s ease;
 	}
 }	
+
+.loadmore{
+	width:100%;
+	padding:0 0 50px;
+	text-align:center;
+}
