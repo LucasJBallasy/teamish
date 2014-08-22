@@ -5,60 +5,12 @@
   	max-width:1300px;
 }
 
-#ProductGrid{
-	margin-top:65px;
-}
-
 .saleproduct{
-	width:47%;
-	margin:0 0 45px;
+	width:24%;
+	margin:0;
 	vertical-align: top;
 	display: inline-block;
 	position: relative;
-	box-sizing:border-box;
-	overflow:auto;
-
-	&.left{
-		float:left;
-	}
-
-	&.right{
-		float:right;
-	}
-
-	&.top{
-		margin-top:180px;
-	}
-
-	&.small{
-		margin:15px 25px 30px;
-		width:20%;
-	}
-
-	&.topsmall{
-		margin-top:150px;
-	}
-
-	&.bottom{
-		margin-top:-100px;
-		margin-left:40%;
-		margin-bottom:100px;
-	}
-
-	&:hover{
-
-		.imgouter:after{
-			background-color:rgba($brand-color,.5);
-		}
-
-		.listinginfo{
-			background-color:$brand-color;
-
-			h1, h2{
-				color:#fff;
-			}
-		}
-	}
 
 	.imgouter{
 		background-image:url('../images/redsolo01.jpg');
@@ -83,6 +35,22 @@
 			content:'';
 			transition:.5s ease;
 		}
+
+		&:hover{
+
+			&:after{
+				position:absolute;
+				width:100%;
+				height:100%;
+				top:0;
+				bottom:0;
+				left:0;
+				right:0;
+				background-color:$brand-color;
+				content:'';
+				opacity:.8;
+			}
+		}
 	}
 
 	.listinginfo{
@@ -93,6 +61,5 @@
 		margin: -15px auto 0;
 		text-align:center;
 		border:2px $brand-color solid;
-		transition:.5s ease;
 	}
 }	
