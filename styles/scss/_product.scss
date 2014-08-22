@@ -1,10 +1,25 @@
 #ProductListing{
   display:inline-block;
+  margin-bottom:40px;
+
+  @media screen and (max-width: $break-2) {
+    margin-bottom:0;
+  }
 }
 
 #Slideshow{
+  width:50%;
   max-width: 685px;
   float:left;
+
+  @media screen and (max-width: 1180px) {
+    width:35%;
+  }
+
+  @media screen and (max-width: $break-2) {
+    width:100%;
+    max-width:100%;
+  }
 
   .simpleSlider {
     z-index:1;	
@@ -66,11 +81,24 @@
 }
 
 #ProductInfo{
+  width:50%;
 	z-index:2;
 	position:relative;
-	margin:25px 0 0 60px;
+	padding:25px 0 0 60px;
 	float:left;
-	max-width:550px;
+	max-width:600px;
+  box-sizing:border-box;
+
+  @media screen and (max-width: 1180px) {
+    width:65%;
+  }
+
+  @media screen and (max-width: $break-2) {
+    padding:25px 40px;;
+    text-align:center;
+    width:100%;
+    max-width:100%;
+  }
 
   .link{
     position:relative;

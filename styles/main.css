@@ -55,12 +55,6 @@ h1, h2, h3, h4, h5, li, a, .h1, .h2, .h3, .h4, .h5 {
 h1, .h1 {
   font-size: 42px;
   line-height: 1em; }
-  @media screen and (max-width: 980px) {
-    h1, .h1 {
-      font-size: 60px; } }
-  @media screen and (max-width: 450px) {
-    h1, .h1 {
-      font-size: 40px; } }
 
 h2, .h2 {
   font-size: 25px;
@@ -69,19 +63,10 @@ h2, .h2 {
 h3, .h3 {
   font-size: 20px;
   line-height: 1em; }
-  @media screen and (max-width: 980px) {
-    h3, .h3 {
-      font-size: 14px; } }
-  @media screen and (max-width: 450px) {
-    h3, .h3 {
-      font-size: 12px; } }
 
 h4, .h4 {
   font-size: 16px;
   line-height: 1.45; }
-  @media screen and (max-width: 640px) {
-    h4, .h4 {
-      font-size: 20px; } }
 
 h5, .h5 {
   font-size: 55px;
@@ -262,11 +247,23 @@ p, .p {
     padding-top: 100%; }
 
 #ProductListing {
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: 40px; }
+  @media screen and (max-width: 1024px) {
+    #ProductListing {
+      margin-bottom: 0; } }
 
 #Slideshow {
+  width: 50%;
   max-width: 685px;
   float: left; }
+  @media screen and (max-width: 1180px) {
+    #Slideshow {
+      width: 35%; } }
+  @media screen and (max-width: 1024px) {
+    #Slideshow {
+      width: 100%;
+      max-width: 100%; } }
   #Slideshow .simpleSlider {
     z-index: 1;
     clear: both;
@@ -312,11 +309,23 @@ p, .p {
       width: 75px; }
 
 #ProductInfo {
+  width: 50%;
   z-index: 2;
   position: relative;
-  margin: 25px 0 0 60px;
+  padding: 25px 0 0 60px;
   float: left;
-  max-width: 550px; }
+  max-width: 600px;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; }
+  @media screen and (max-width: 1180px) {
+    #ProductInfo {
+      width: 65%; } }
+  @media screen and (max-width: 1024px) {
+    #ProductInfo {
+      padding: 25px 40px;
+      text-align: center;
+      width: 100%;
+      max-width: 100%; } }
   #ProductInfo .link {
     position: relative; }
     #ProductInfo .link:after {
@@ -345,12 +354,53 @@ p, .p {
   #ProductInfo .story {
     margin: 30px 0; }
 
+@media screen and (max-width: 1024px) {
+  #MoreProducts {
+    text-align: center; } }
+#MoreProducts .all {
+  display: inline-block;
+  float: right;
+  position: relative;
+  margin-right: 15px; }
+  @media screen and (max-width: 1024px) {
+    #MoreProducts .all {
+      display: none; } }
+  #MoreProducts .all:before {
+    content: '[';
+    top: 0;
+    left: -20px;
+    bottom: 0;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+  #MoreProducts .all:after {
+    content: ']';
+    top: 0;
+    right: -20px;
+    bottom: 0;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+  #MoreProducts .all:hover:before {
+    left: -15px;
+    opacity: 1; }
+  #MoreProducts .all:hover:after {
+    right: -15px;
+    opacity: 1; }
+#MoreProducts .all2 {
+  text-align: center;
+  display: none; }
+  @media screen and (max-width: 1024px) {
+    #MoreProducts .all2 {
+      display: block; } }
 #MoreProducts .h2 {
-  padding: 20px 0 0; }
+  display: inline-block; }
 #MoreProducts .h3, #MoreProducts .h4 {
   color: fff; }
 #MoreProducts .three {
-  padding: 30px 0 60px 0;
+  padding: 30px 0 30px 0;
   max-width: 1400px;
   font-size: 0;
   text-align: justify; }
@@ -365,12 +415,22 @@ p, .p {
     vertical-align: top;
     display: inline-block;
     position: relative; }
+    @media screen and (max-width: 1024px) {
+      #MoreProducts .three .product {
+        width: 45%;
+        margin-bottom: 35px; } }
+    @media screen and (max-width: 640px) {
+      #MoreProducts .three .product {
+        width: 100%; } }
     #MoreProducts .three .product:hover .imgouter:after {
       background-color: rgba(255, 63, 61, 0.5); }
     #MoreProducts .three .product:hover .listinginfo {
       background-color: #ff3f3d; }
       #MoreProducts .three .product:hover .listinginfo h1, #MoreProducts .three .product:hover .listinginfo h2 {
         color: #fff; }
+    @media screen and (max-width: 1024px) {
+      #MoreProducts .three .product.gap {
+        display: none; } }
     #MoreProducts .three .product .imgouter {
       background-image: url('../images/redsolo01.jpg');
       background-size: cover;
@@ -609,9 +669,6 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
           transition: 1s;
   border-radius: 0;
   width: 250px; }
-  @media screen and (max-width: 980px) {
-    textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
-      margin-bottom: 10px; } }
 
 textarea:focus, input:focus {
   background-color: rgba(255, 63, 61, 0.1);
