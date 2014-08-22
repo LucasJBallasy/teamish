@@ -182,56 +182,76 @@ p, .p {
       opacity: .6; }
       #Nav li.login:hover {
         opacity: 1; }
+    #Nav li.active {
+      text-transform: uppercase; }
     #Nav li a {
       border-bottom: 2px #fff solid;
-      transition: border .15s linear; }
-      #Nav li a:hover {
-        border-bottom: 2px #ff3f3d solid; }
+      transition: border .15s linear;
+      position: relative; }
+      #Nav li a:after {
+        position: absolute;
+        top: 22px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: '';
+        height: 2px;
+        width: auto;
+        z-index: 10;
+        transform: translate3d(-80px, 0, 0);
+        background-color: #ff3f3d;
+        opacity: 0;
+        transition: opacity 1s ease; }
+      #Nav li a:hover:after {
+        transform: translate3d(0, 0, 0);
+        opacity: 1; }
 
-#HomeContainer .half {
-  text-align: center;
-  width: 48%;
-  background-color: yellow;
-  background-image: url("../images/barrelmoments01.jpg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  box-sizing: border-box; }
-  #HomeContainer .half.left {
-    margin: 0 1% 0 0;
-    float: left; }
-  #HomeContainer .half.right {
-    margin: 100px 0 0 1%;
-    float: right; }
-  #HomeContainer .half h1 {
-    z-index: 2;
-    position: absolute;
-    top: 40%;
-    left: 0;
-    right: 0;
-    color: #fff; }
-  #HomeContainer .half:before {
-    z-index: 3;
-    position: absolute;
-    top: 20px;
-    bottom: 20px;
-    right: 20px;
-    left: 20px;
-    content: '';
-    border: 2px #fff solid; }
-  #HomeContainer .half:after {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    content: '';
-    background-color: #ff3f3d;
-    opacity: .85; }
-#HomeContainer span {
-  display: block;
-  padding-top: 100%; }
+#HomeContainer {
+  overflow: auto; }
+  #HomeContainer .half {
+    text-align: center;
+    width: 48%;
+    background-color: yellow;
+    background-image: url("../images/barrelmoments01.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-sizing: border-box; }
+    #HomeContainer .half.left {
+      margin: 0 1% 0 0;
+      float: left; }
+    #HomeContainer .half.right {
+      margin: 100px 0 0 1%;
+      float: right; }
+    #HomeContainer .half h1 {
+      z-index: 2;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      right: 0;
+      color: #fff; }
+    #HomeContainer .half:before {
+      z-index: 3;
+      position: absolute;
+      top: 20px;
+      bottom: 20px;
+      right: 20px;
+      left: 20px;
+      content: '';
+      border: 2px #fff solid; }
+    #HomeContainer .half:after {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      content: '';
+      background-color: #ff3f3d;
+      opacity: .85; }
+  #HomeContainer span {
+    display: block;
+    padding-top: 100%; }
 
 #ProductListing {
   display: inline-block; }

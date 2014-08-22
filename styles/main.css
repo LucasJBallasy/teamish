@@ -173,55 +173,80 @@ p, .p {
     #Nav li a {
       border-bottom: 2px #fff solid;
       -webkit-transition: border 0.15s linear;
-              transition: border 0.15s linear; }
-      #Nav li a:hover {
-        border-bottom: 2px #ff3f3d solid; }
+              transition: border 0.15s linear;
+      position: relative; }
+      #Nav li a:after {
+        position: absolute;
+        top: 22px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: '';
+        height: 2px;
+        width: auto;
+        z-index: 10;
+        -webkit-transform: translate3d(-10px, 0, 0);
+                transform: translate3d(-10px, 0, 0);
+        background-color: #ff3f3d;
+        opacity: 0;
+        -webkit-transition: 0.5s ease;
+                transition: 0.5s ease; }
+      #Nav li a.active:after {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+        opacity: 1; }
+      #Nav li a:hover:after {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+        opacity: 1; }
 
-#HomeContainer .half {
-  text-align: center;
-  width: 48%;
-  background-color: yellow;
-  background-image: url('../images/barrelmoments01.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
-  #HomeContainer .half.left {
-    margin: 0 1% 0 0;
-    float: left; }
-  #HomeContainer .half.right {
-    margin: 100px 0 0 1%;
-    float: right; }
-  #HomeContainer .half h1 {
-    z-index: 2;
-    position: absolute;
-    top: 40%;
-    left: 0;
-    right: 0;
-    color: #fff; }
-  #HomeContainer .half:before {
-    z-index: 3;
-    position: absolute;
-    top: 20px;
-    bottom: 20px;
-    right: 20px;
-    left: 20px;
-    content: '';
-    border: 2px #fff solid; }
-  #HomeContainer .half:after {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    content: '';
-    background-color: #ff3f3d;
-    opacity: 0.85; }
-#HomeContainer span {
-  display: block;
-  padding-top: 100%; }
+#HomeContainer {
+  overflow: auto; }
+  #HomeContainer .half {
+    text-align: center;
+    width: 48%;
+    background-color: yellow;
+    background-image: url('../images/barrelmoments01.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box; }
+    #HomeContainer .half.left {
+      margin: 0 1% 0 0;
+      float: left; }
+    #HomeContainer .half.right {
+      margin: 100px 0 0 1%;
+      float: right; }
+    #HomeContainer .half h1 {
+      z-index: 2;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      right: 0;
+      color: #fff; }
+    #HomeContainer .half:before {
+      z-index: 3;
+      position: absolute;
+      top: 20px;
+      bottom: 20px;
+      right: 20px;
+      left: 20px;
+      content: '';
+      border: 2px #fff solid; }
+    #HomeContainer .half:after {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      content: '';
+      background-color: #ff3f3d;
+      opacity: 0.85; }
+  #HomeContainer span {
+    display: block;
+    padding-top: 100%; }
 
 #ProductListing {
   display: inline-block; }
@@ -283,7 +308,6 @@ p, .p {
     border-bottom: 2px #ff3f3d solid;
     display: inline; }
   #ProductInfo .title {
-    margin: 0 0 0 -100px;
     z-index: 2; }
   #ProductInfo .subinfo {
     margin: 35px 0 10px; }
@@ -294,65 +318,62 @@ p, .p {
   #ProductInfo .story {
     margin: 30px 0; }
 
-#MoreProducts {
-  padding: 50px 0 0 210px;
-  max-width: 1300px; }
-  #MoreProducts .h2 {
-    border-top: 2px #ff3f3d solid;
-    padding: 10px 0 0; }
-  #MoreProducts .h3, #MoreProducts .h4 {
-    color: fff; }
-  #MoreProducts .three {
-    padding: 20px 0 60px 0;
-    max-width: 1400px;
-    font-size: 0;
-    text-align: justify; }
-    #MoreProducts .three:after {
-      content: '';
-      display: inline-block;
-      width: 100%;
-      height: 0; }
-    #MoreProducts .three .product {
-      width: 24%;
-      margin: 0;
-      vertical-align: top;
-      display: inline-block;
+#MoreProducts .h2 {
+  border-top: 2px #ff3f3d solid;
+  padding: 20px 0 0; }
+#MoreProducts .h3, #MoreProducts .h4 {
+  color: fff; }
+#MoreProducts .three {
+  padding: 20px 0 60px 0;
+  max-width: 1400px;
+  font-size: 0;
+  text-align: justify; }
+  #MoreProducts .three:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0; }
+  #MoreProducts .three .product {
+    width: 24%;
+    margin: 0;
+    vertical-align: top;
+    display: inline-block;
+    position: relative; }
+    #MoreProducts .three .product:hover .imgouter:after {
+      background-color: rgba(255, 63, 61, 0.5); }
+    #MoreProducts .three .product:hover .listinginfo {
+      background-color: #ff3f3d; }
+      #MoreProducts .three .product:hover .listinginfo h1, #MoreProducts .three .product:hover .listinginfo h2 {
+        color: #fff; }
+    #MoreProducts .three .product .imgouter {
+      background-image: url('../images/redsolo01.jpg');
+      background-size: cover;
+      background-position: center;
       position: relative; }
-      #MoreProducts .three .product:hover .imgouter:after {
-        background-color: rgba(255, 63, 61, 0.5); }
-      #MoreProducts .three .product:hover .listinginfo {
-        background-color: #ff3f3d; }
-        #MoreProducts .three .product:hover .listinginfo h1, #MoreProducts .three .product:hover .listinginfo h2 {
-          color: #fff; }
-      #MoreProducts .three .product .imgouter {
-        background-image: url('../images/redsolo01.jpg');
-        background-size: cover;
-        background-position: center;
-        position: relative; }
-        #MoreProducts .three .product .imgouter span {
-          display: block;
-          padding-top: 100%; }
-        #MoreProducts .three .product .imgouter:after {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          content: '';
-          -webkit-transition: 0.5s ease;
-                  transition: 0.5s ease; }
-      #MoreProducts .three .product .listinginfo {
-        z-index: 3;
-        position: relative;
-        padding: 20px 10px;
-        max-width: 80%;
-        margin: -15px auto 0;
-        text-align: center;
-        border: 2px #ff3f3d solid;
+      #MoreProducts .three .product .imgouter span {
+        display: block;
+        padding-top: 100%; }
+      #MoreProducts .three .product .imgouter:after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: '';
         -webkit-transition: 0.5s ease;
                 transition: 0.5s ease; }
+    #MoreProducts .three .product .listinginfo {
+      z-index: 3;
+      position: relative;
+      padding: 20px 10px;
+      max-width: 80%;
+      margin: -15px auto 0;
+      text-align: center;
+      border: 2px #ff3f3d solid;
+      -webkit-transition: 0.5s ease;
+              transition: 0.5s ease; }
 
 #BuyList {
   width: 100%;
