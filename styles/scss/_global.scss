@@ -29,8 +29,26 @@
 }
 
 .contentwrapper{
-	margin:50px 0 0 230px;
-    max-width:1300px;
+	padding:50px 50px 0 230px;
+    position:relative;
+    box-sizing:border-box;
+
+    .search{
+    	position:absolute;
+    	top:50px;
+    	right:50px;
+
+    	textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]{
+			padding-left:45px;
+		}
+
+    	span img{
+    		width:15px;
+    		position:absolute;
+    		top:18px;
+    		left:20px;
+    	}
+    }
 }
 
 .btn2{

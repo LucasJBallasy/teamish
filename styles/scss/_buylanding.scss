@@ -1,6 +1,7 @@
 #BuyList{
 	width:100%;
     display:inline-block;
+    position:relative;
 }
 
 #ProductGrid{
@@ -15,6 +16,10 @@
 		position: relative;
 		box-sizing:border-box;
 		overflow:auto;
+
+		@media screen and (max-width: $break-5) {
+			padding:15px 15px;
+		}
 
 		&:nth-child(5n+1), &:nth-child(5n+3), &:nth-child(5n+4), &:nth-child(5n+5){
 			float:left;

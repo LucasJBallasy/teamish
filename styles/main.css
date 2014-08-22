@@ -120,8 +120,21 @@ p, .p {
     color: #fff; }
 
 .contentwrapper {
-  margin: 50px 0 0 230px;
-  max-width: 1300px; }
+  padding: 50px 50px 0 230px;
+  position: relative;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; }
+  .contentwrapper .search {
+    position: absolute;
+    top: 50px;
+    right: 50px; }
+    .contentwrapper .search textarea, .contentwrapper .search select, .contentwrapper .search input[type="date"], .contentwrapper .search input[type="datetime"], .contentwrapper .search input[type="datetime-local"], .contentwrapper .search input[type="email"], .contentwrapper .search input[type="month"], .contentwrapper .search input[type="number"], .contentwrapper .search input[type="password"], .contentwrapper .search input[type="search"], .contentwrapper .search input[type="tel"], .contentwrapper .search input[type="text"], .contentwrapper .search input[type="time"], .contentwrapper .search input[type="url"], .contentwrapper .search input[type="week"] {
+      padding-left: 45px; }
+    .contentwrapper .search span img {
+      width: 15px;
+      position: absolute;
+      top: 18px;
+      left: 20px; }
 
 .btn2 {
   text-align: center;
@@ -376,7 +389,8 @@ p, .p {
 
 #BuyList {
   width: 100%;
-  display: inline-block; }
+  display: inline-block;
+  position: relative; }
 
 #ProductGrid {
   margin-top: 65px;
@@ -390,6 +404,9 @@ p, .p {
     -moz-box-sizing: border-box;
          box-sizing: border-box;
     overflow: auto; }
+    @media screen and (max-width: 640px) {
+      #ProductGrid li {
+        padding: 15px 15px; } }
     #ProductGrid li:nth-child(5n+1), #ProductGrid li:nth-child(5n+3), #ProductGrid li:nth-child(5n+4), #ProductGrid li:nth-child(5n+5) {
       float: left; }
     #ProductGrid li:nth-child(5n+2) {
@@ -561,122 +578,53 @@ p, .p {
     .accordion dd:last-of-type {
       position: relative; }
 
-.modal-container {
-  z-index: 20;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(102, 104, 105, 0.8);
-  position: fixed;
-  -webkit-transition: 1s;
-          transition: 1s;
-  background-color: rgba(102, 104, 105, 0);
-  pointer-events: none; }
-  .show-modal .modal-container {
-    opacity: 1;
-    background-color: rgba(102, 104, 105, 0.8);
-    pointer-events: auto; }
-  .modal-container .modal-inner {
-    position: fixed;
-    width: 570px;
-    background-color: #fff;
-    top: 20%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    padding: 50px 50px 70px;
-    margin-top: -800px;
-    -webkit-transition: -webkit-transform 1s cubic-bezier(0.68, -0, 0.265, 1);
-            transition: transform 1s cubic-bezier(0.68, -0, 0.265, 1); }
-    @media screen and (max-width: 980px) {
-      .modal-container .modal-inner {
-        width: 500px; } }
-    @media screen and (max-width: 768px) {
-      .modal-container .modal-inner {
-        width: 400px; } }
-    @media screen and (max-width: 640px) {
-      .modal-container .modal-inner {
-        width: 250px; } }
-    @media screen and (max-width: 450px) {
-      .modal-container .modal-inner {
-        top: 10%;
-        width: 200px;
-        padding: 25px 50px 50px; } }
-    .modal-container .modal-inner .modal-close {
-      color: rgba(102, 104, 105, 0.5);
-      position: absolute;
-      right: 30px;
-      top: 25px;
-      font-size: 25px;
-      -webkit-transition: 1s;
-              transition: 1s; }
-      .modal-container .modal-inner .modal-close:hover {
-        color: #666869;
-        -webkit-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
-                transform: rotate(180deg); }
-    .modal-container .modal-inner .centercopy {
-      width: 100%; }
-      .modal-container .modal-inner .centercopy img {
-        width: 90px; }
-      .modal-container .modal-inner .centercopy .h4 {
-        color: #666869;
-        display: inline-block; }
-    .show-modal .modal-container .modal-inner {
-      -webkit-transform: translate3d(0, 800px, 0);
-              transform: translate3d(0, 800px, 0); }
-
-#FormContainer {
-  margin: 20px auto 0;
-  text-align: center;
-  width: 100%; }
-  #FormContainer .mc-field-group {
-    margin: 5px 0 10px;
-    display: inline-block; }
-  #FormContainer .clear {
-    display: inline-block; }
-    @media screen and (max-width: 980px) {
-      #FormContainer .clear {
-        margin-top: 10px;
-        display: block; } }
-  #FormContainer .button {
-    margin: 0;
-    cursor: pointer;
-    display: inline-block;
-    border: none;
-    border: 1px solid transparent;
-    vertical-align: middle;
-    border-radius: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none; }
-
 textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
-  border: 2px solid rgba(102, 104, 105, 0.35);
+  border: 2px solid #ff3f3d;
   -webkit-appearance: none;
   background-color: #fff;
-  color: #666869;
+  color: #ff3f3d;
   outline: 0;
   text-align: left;
   vertical-align: middle;
   box-shadow: none;
-  padding: 16px;
+  padding: 10px 20px;
   -webkit-transition: 1s;
           transition: 1s;
-  max-width: 200px;
-  border-radius: 0; }
+  border-radius: 0;
+  width: 250px; }
   @media screen and (max-width: 980px) {
     textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
       margin-bottom: 10px; } }
 
 textarea:focus, input:focus {
-  border: 2px solid #e77154; }
+  background-color: rgba(255, 63, 61, 0.1);
+  text-overflow: ellipsis; }
+
+input[placeholder] {
+  text-overflow: ellipsis; }
+
+::-moz-placeholder {
+  text-overflow: ellipsis; }
+
+input:-moz-placeholder {
+  text-overflow: ellipsis; }
+
+::-webkit-input-placeholder {
+  color: rgba(255, 63, 61, 0.5); }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(255, 63, 61, 0.5); }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(255, 63, 61, 0.5); }
+
+:-ms-input-placeholder {
+  color: rgba(255, 63, 61, 0.5); }
 
 #Footer {
   margin: 50px 0 0;

@@ -51,7 +51,7 @@
 		}
 
 		.modal-close{
-			color:rgba($color-grey,.5);
+			color:rgba($brand-color,.5);
 			position: absolute;
 			right: 30px;
 			top: 25px;
@@ -59,7 +59,7 @@
 			transition:1s;
 
 			&:hover{
-				color:rgba($color-grey,1);
+				color:rgba($brand-color,1);
 				transform:rotate(180deg);
 			}
 		}
@@ -72,7 +72,7 @@
 			}
 
 			.h4{
-				color:$color-grey;
+				color:$brand-color;
 				display:inline-block;
 			}
 		}
@@ -125,10 +125,10 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
 	  -webkit-background-clip: padding;
 	  -moz-background-clip: padding;
 	  background-clip:padding-box;
-	  border:2px solid rgba($color-grey, .35);
+	  border:2px solid rgba($brand-color, .35);
 	  -webkit-appearance:none;
 	  background-color:#fff;
-	  color:$color-grey;
+	  color:$brand-color;
 	  outline:0;
 	  text-align: left;
 	  vertical-align: middle;
@@ -144,7 +144,7 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
 }
 
 textarea:focus, input:focus {
-	border:2px solid $color-green;
+	border:2px solid $brand-color;
 }
 
 

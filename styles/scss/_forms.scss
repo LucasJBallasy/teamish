@@ -1,0 +1,61 @@
+textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]{
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  -webkit-background-clip: padding;
+	  -moz-background-clip: padding;
+	  background-clip:padding-box;
+	  border:2px solid $brand-color;
+	  -webkit-appearance:none;
+	  background-color:#fff;
+	  color:$brand-color;
+	  outline:0;
+	  text-align: left;
+	  vertical-align: middle;
+	  box-shadow: none;
+	  padding:10px 20px;
+	  transition:1s;
+	  border-radius: 0;
+	  width:250px;
+
+	  @media screen and (max-width: $break-3) {
+			margin-bottom:10px;
+		}
+}
+
+textarea:focus, input:focus {
+	background-color:rgba($brand-color,.1);
+	text-overflow: ellipsis; 
+}
+
+input[placeholder]{ 
+	text-overflow: ellipsis; 
+}
+
+::-moz-placeholder {
+	text-overflow: ellipsis;
+}
+
+input:-moz-placeholder{
+	text-overflow: ellipsis;
+}
+
+::-webkit-input-placeholder {
+   color: rgba($brand-color,.5);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba($brand-color,.5);  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba($brand-color,.5);  
+}
+
+:-ms-input-placeholder {  
+   color: rgba($brand-color,.5);  
+}
+
+
+
+
