@@ -1,7 +1,7 @@
 #MoreProducts{
 
 	.h2{
-		border-top:2px $brand-color solid;
+		// border-top:2px $brand-color solid;
 		padding: 20px 0 0;
 	}
 
@@ -10,7 +10,7 @@
 	}
 
 	.three{
-		padding:20px 0 60px 0;
+		padding:30px 0 60px 0;
 		max-width:1400px;
 		font-size:0;
 		text-align:justify;
@@ -23,7 +23,7 @@
 		}
 
 		.product{
-			width:24%;
+			width:22%;
 			margin:0;
 			vertical-align: top;
 			display: inline-block;
