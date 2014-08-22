@@ -23,7 +23,7 @@ html {
 
 body {
   line-height: 1;
-  background-color: #fff; }
+  background-color: #f7f7f7; }
 
 ol, ul {
   list-style: none; }
@@ -140,7 +140,7 @@ p, .p {
 
 #MainNav {
   margin: 0 auto;
-  padding: 50px 30px 0;
+  padding: 50px 0 0 60px;
   width: 150px;
   position: fixed;
   top: 0;
@@ -163,8 +163,8 @@ p, .p {
         border-bottom: 2px #ff3f3d solid; }
 
 #HomeContainer {
-  margin: 50px 0 0 210px;
-  max-width: 1400px;
+  margin: 50px 0 0 230px;
+  max-width: 1300px;
   -moz-box-sizing: border-box;
        box-sizing: border-box; }
   #HomeContainer .half {
@@ -214,9 +214,9 @@ p, .p {
     padding-top: 100%; }
 
 #ProductListing {
-  margin: 50px 0 0 210px;
   display: inline-block;
-  max-width: 1400px; }
+  margin: 50px 0 0 230px;
+  max-width: 1300px; }
 
 #Slideshow {
   max-width: 685px;
@@ -288,8 +288,7 @@ p, .p {
 
 #MoreProducts {
   padding: 50px 0 0 210px;
-  margin: 50px 0 0 0;
-  width: 100%; }
+  max-width: 1300px; }
   #MoreProducts .h2 {
     border-top: 2px #ff3f3d solid;
     padding: 10px 0 0; }
@@ -351,10 +350,10 @@ p, .p {
         border: 2px #ff3f3d solid; }
 
 #BorrowList {
-  margin: 50px 0 0 210px;
   width: 100%;
   display: inline-block;
-  max-width: 1400px; }
+  margin: 50px 0 0 230px;
+  max-width: 1300px; }
 
 .accordion {
   border-bottom: 2px #ff3f3d solid;
