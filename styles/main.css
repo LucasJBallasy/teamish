@@ -134,7 +134,7 @@ p, .p {
       width: 15px;
       position: absolute;
       top: 18px;
-      left: 20px; }
+      left: 18px; }
 
 .btn2 {
   text-align: center;
@@ -317,6 +317,20 @@ p, .p {
   margin: 25px 0 0 60px;
   float: left;
   max-width: 550px; }
+  #ProductInfo .link {
+    position: relative; }
+    #ProductInfo .link:after {
+      position: absolute;
+      content: "\203A \203A";
+      top: 0;
+      bottom: 0;
+      right: -30px;
+      color: #ff3f3d;
+      -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+              transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    #ProductInfo .link:hover:after {
+      -webkit-transform: translate3d(10px, 0, 0);
+              transform: translate3d(10px, 0, 0); }
   #ProductInfo .title h1 {
     border-bottom: 2px #ff3f3d solid;
     display: inline; }
