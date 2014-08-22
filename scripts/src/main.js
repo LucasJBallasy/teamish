@@ -194,4 +194,11 @@ $(function(){
 
     });
 
+    // // window height
+    //   $('.contentwrapper').css('min-height', $(window).height() - 49 - $('#Footer').outerHeight()); 
+
+    //   $(window).on('resize', function() { 
+    //     $('.contentwrapper').css('min-height', $(window).height() - 49 - $('#Footer').outerHeight()); 
+    //   }); 
+
 })

@@ -1,8 +1,9 @@
 #MoreProducts{
+	margin-bottom:50px;
 
-	  @media screen and (max-width: $break-2) {
-	    text-align:center;
-	  }
+	 @media screen and (max-width: $break-2) {
+	   text-align:center;
+	 }
 
 	.all{
 		display:inline-block;
