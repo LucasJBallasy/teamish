@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, li, a, .h1, .h2, .h3, .h4, .h5 {
 
 h1, .h1 {
   font-size: 42px;
-  line-height: 1em; }
+  line-height: 1.25em; }
 
 h2, .h2 {
   font-size: 25px;
@@ -106,7 +106,7 @@ p, .p {
     color: #fff; }
 
 .contentwrapper {
-  padding: 50px 50px 0 230px;
+  padding: 50px 50px 0 240px;
   position: relative;
   -moz-box-sizing: border-box;
        box-sizing: border-box; }
@@ -147,24 +147,30 @@ p, .p {
 #MainNav {
   margin: 0 auto;
   padding: 50px 0 0 60px;
-  width: 150px;
   position: fixed;
   top: 0;
   height: 100%;
   z-index: 10; }
+  #MainNav .icons img {
+    width: 125px;
+    position: absolute; }
   #MainNav .logo {
-    width: 40px;
-    height: 40px;
-    border: 4px #ff3f3d solid;
-    display: block; }
+    padding: 10px;
+    border: 3px #ff3f3d solid;
+    display: block;
+    box-shadow: -3px 3px 0px #ff3f3d; }
+    #MainNav .logo:hover {
+      box-shadow: 0 0 0 #fff;
+      margin: 3px -3px 0; }
   @media screen and (max-width: 980px) {
     #MainNav {
       display: none; } }
 
 #Nav {
-  margin: 30px 0 0;
   width: 100%;
-  text-align: left; }
+  text-align: left;
+  position: absolute;
+  top: 155px; }
   #Nav li {
     margin: 0 0 20px; }
     #Nav li.login {
@@ -203,7 +209,6 @@ p, .p {
         opacity: 1; }
 
 #MobileNav {
-  z-index: 60;
   width: 100%;
   display: none;
   position: absolute;
@@ -219,17 +224,31 @@ p, .p {
   @media screen and (max-width: 980px) {
     #MobileNav {
       display: block; } }
-  #MobileNav .menubtn {
+  #MobileNav .logo2 {
+    z-index: 100;
+    padding: 10px;
+    border: 3px #ff3f3d solid;
+    display: block;
+    box-shadow: -3px 3px 0px #ff3f3d;
     position: absolute;
     top: 25px;
-    left: 50px;
+    left: 50px; }
+    #MobileNav .logo2:hover {
+      box-shadow: 0 0 0 #fff;
+      margin: 3px -3px 0; }
+  #MobileNav .menubtn {
+    position: absolute;
+    top: 30px;
+    right: 50px;
     width: 40px;
     height: 40px;
-    border: 4px #ff3f3d solid;
     display: block;
     z-index: 100; }
   #MobileNav.open {
-    background: rgba(255, 63, 61, 0.9); }
+    z-index: 60;
+    background: rgba(255, 63, 61, 0.9);
+    opacity: 1;
+    pointer-events: auto; }
     #MobileNav.open #Nav2 {
       opacity: 1;
       pointer-events: auto; }
@@ -292,6 +311,13 @@ button:hover .line {
 
 #HomeContainer {
   overflow: auto; }
+  #HomeContainer .hometitle {
+    width: 50%;
+    margin: 0 0 50px; }
+    #HomeContainer .hometitle a {
+      border-bottom: 3px #ff3f3d solid; }
+      #HomeContainer .hometitle a:hover {
+        border-bottom: 3px #ff3f3d dashed; }
   #HomeContainer .half {
     text-align: center;
     width: 48%;
@@ -303,10 +329,10 @@ button:hover .line {
     -moz-box-sizing: border-box;
          box-sizing: border-box; }
     #HomeContainer .half.left {
-      margin: 0 1% 0 0;
+      margin: 80px 0 0 1%;
       float: left; }
     #HomeContainer .half.right {
-      margin: 100px 0 0 1%;
+      margin: 0 1% 0 0;
       float: right; }
     #HomeContainer .half h1 {
       z-index: 2;
@@ -570,9 +596,6 @@ button:hover .line {
     -moz-box-sizing: border-box;
          box-sizing: border-box;
     overflow: auto; }
-    @media screen and (max-width: 640px) {
-      #ProductGrid li {
-        padding: 15px 15px; } }
     #ProductGrid li:nth-child(5n+1), #ProductGrid li:nth-child(5n+3), #ProductGrid li:nth-child(5n+4), #ProductGrid li:nth-child(5n+5) {
       float: left; }
     #ProductGrid li:nth-child(5n+2) {
@@ -587,6 +610,25 @@ button:hover .line {
       margin-top: -100px;
       margin-left: 40%;
       margin-bottom: 100px; }
+    @media screen and (max-width: 1180px) {
+      #ProductGrid li:nth-child(5n+1), #ProductGrid li:nth-child(5n+2), #ProductGrid li:nth-child(5n+3), #ProductGrid li:nth-child(5n+4), #ProductGrid li:nth-child(5n+5) {
+        float: none;
+        margin: 0; } }
+    @media screen and (max-width: 1180px) {
+      #ProductGrid li:nth-child(6n+1), #ProductGrid li:nth-child(6n+2), #ProductGrid li:nth-child(6n+3), #ProductGrid li:nth-child(6n+4), #ProductGrid li:nth-child(6n+5), #ProductGrid li:nth-child(6n+6) {
+        width: 47%;
+        margin: 0 0 45px;
+        display: inline-block; }
+      #ProductGrid li:nth-child(6n+1), #ProductGrid li:nth-child(6n+3), #ProductGrid li:nth-child(6n+5) {
+        float: left; }
+      #ProductGrid li:nth-child(6n+2), #ProductGrid li:nth-child(6n+4), #ProductGrid li:nth-child(6n+6) {
+        float: right;
+        margin-top: 45px; } }
+    @media screen and (max-width: 700px) {
+      #ProductGrid li:nth-child(6n+1), #ProductGrid li:nth-child(6n+2), #ProductGrid li:nth-child(6n+3), #ProductGrid li:nth-child(6n+4), #ProductGrid li:nth-child(6n+5), #ProductGrid li:nth-child(6n+6) {
+        width: 100%;
+        margin: 0 0 45px;
+        display: inline-block; } }
     #ProductGrid li:hover .imgouter:after {
       background-color: rgba(255, 63, 61, 0.5); }
     #ProductGrid li:hover .listinginfo {

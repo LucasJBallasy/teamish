@@ -49,15 +49,15 @@ $(function(){
 });
 
 
-	$("#Hero > img:gt(0)").hide();
+	$(".icons > img:gt(0)").hide();
 
 	setInterval(function() { 
-	  $('#Hero > img:first')
-	    .fadeOut(1500)
+	  $('.icons > img:first')
+	    .fadeOut(400)
 	    .next()
-	    .fadeIn(1500)
+	    .fadeIn(400)
 	    .end()
-	    .appendTo('#Hero');
+	    .appendTo('.icons');
 	},  3000);
 	
 	// Slideshow
