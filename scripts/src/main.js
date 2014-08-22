@@ -15,7 +15,7 @@ $(document).ready(function() {
   		$allPanels.slideUp();
 	    $(this).parent().next().slideDown(400, function() {
   			$('html,body').animate({
-	          scrollTop: $this.offset().top - 115
+	          scrollTop: $this.offset().top - 50
 	        }, 400);
 	    });
       $('.accordion').find('.red').removeClass('red'); 
