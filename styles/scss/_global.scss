@@ -5,6 +5,7 @@
 	max-width:1600px;
 	overflow:hidden;
 	background-color:#fff;
+	position:relative;
 }
 
 .btn{
@@ -32,6 +33,10 @@
 	padding:50px 50px 0 230px;
     position:relative;
     box-sizing:border-box;
+
+    @media screen and (max-width: $break-3) {
+		padding:100px 50px;
+	}
 
     .search{
     	position:absolute;

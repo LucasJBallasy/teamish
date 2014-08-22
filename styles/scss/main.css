@@ -69,12 +69,6 @@ h1, h2, h3, h4, h5, li, a, .h1, .h2, .h3, .h4, .h5 {
 h1, .h1 {
   font-size: 42px;
   line-height: 1em; }
-  @media screen and (max-width: 980px) {
-    h1, .h1 {
-      font-size: 60px; } }
-  @media screen and (max-width: 450px) {
-    h1, .h1 {
-      font-size: 40px; } }
 
 h2, .h2 {
   font-size: 25px;
@@ -83,19 +77,10 @@ h2, .h2 {
 h3, .h3 {
   font-size: 20px;
   line-height: 1em; }
-  @media screen and (max-width: 980px) {
-    h3, .h3 {
-      font-size: 14px; } }
-  @media screen and (max-width: 450px) {
-    h3, .h3 {
-      font-size: 12px; } }
 
 h4, .h4 {
   font-size: 16px;
   line-height: 1.45; }
-  @media screen and (max-width: 640px) {
-    h4, .h4 {
-      font-size: 20px; } }
 
 h5, .h5 {
   font-size: 55px;
@@ -113,7 +98,8 @@ p, .p {
   height: 100%;
   max-width: 1600px;
   overflow: hidden;
-  background-color: #fff; }
+  background-color: #fff;
+  position: relative; }
 
 .btn {
   text-align: center;
@@ -136,6 +122,9 @@ p, .p {
   padding: 50px 50px 0 230px;
   position: relative;
   box-sizing: border-box; }
+  @media screen and (max-width: 980px) {
+    .contentwrapper {
+      padding: 100px 50px; } }
   .contentwrapper .search {
     position: absolute;
     top: 50px;
@@ -174,14 +163,14 @@ p, .p {
   top: 0;
   height: 100%;
   z-index: 10; }
-  @media screen and (max-width: 640px) {
-    #MainNav {
-      position: absolute; } }
   #MainNav .logo {
     width: 40px;
     height: 40px;
     border: 4px #ff3f3d solid;
     display: block; }
+  @media screen and (max-width: 980px) {
+    #MainNav {
+      display: none; } }
 
 #Nav {
   margin: 30px 0 0;
@@ -218,6 +207,86 @@ p, .p {
       #Nav li a:hover:after {
         transform: translate3d(0, 0, 0);
         opacity: 1; }
+
+#MobileNav {
+  position: relative;
+  width: 100%;
+  display: none; }
+  @media screen and (max-width: 980px) {
+    #MobileNav {
+      display: block; } }
+  #MobileNav .menubtn {
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    border: 4px #ff3f3d solid;
+    display: block;
+    z-index: 100; }
+
+.line {
+  position: absolute;
+  height: 2px;
+  width: 40px;
+  background: black;
+  left: 10px;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease; }
+
+.line-t {
+  top: 10px; }
+
+.line-m {
+  top: 20px; }
+
+.line-b {
+  top: 30px; }
+
+button:hover .line {
+  background: #999; }
+
+.menu-on .line-m, .menu-on:hover .line-m {
+  background: transparent; }
+
+.menu-on .line {
+  top: 20px; }
+
+.menu-on .line-t {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.menu-on .line-b {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+#Nav2 {
+  position: absolute;
+  z-index: 99;
+  text-align: center;
+  width: 100%;
+  padding: 100px 0 100%;
+  box-sizing: border-box;
+  background-color: rgba(255, 63, 61, 0.9);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s ease; }
+  #Nav2 .h1 {
+    margin-bottom: 10px; }
+    #Nav2 .h1 a {
+      color: #fff; }
+  #Nav2.open {
+    opacity: 1;
+    pointer-events: auto; }
 
 #HomeContainer {
   overflow: auto; }
@@ -269,6 +338,9 @@ p, .p {
 #ProductListing {
   display: inline-block;
   margin-bottom: 40px; }
+  @media screen and (max-width: 1024px) {
+    #ProductListing {
+      margin-bottom: 0; } }
 
 #Slideshow {
   width: 50%;
@@ -368,11 +440,17 @@ p, .p {
   #ProductInfo .story {
     margin: 30px 0; }
 
+@media screen and (max-width: 1024px) {
+  #MoreProducts {
+    text-align: center; } }
 #MoreProducts .all {
   display: inline-block;
   float: right;
   position: relative;
   margin-right: 15px; }
+  @media screen and (max-width: 1024px) {
+    #MoreProducts .all {
+      display: none; } }
   #MoreProducts .all:before {
     content: '[';
     top: 0;
@@ -395,12 +473,18 @@ p, .p {
   #MoreProducts .all:hover:after {
     right: -15px;
     opacity: 1; }
+#MoreProducts .all2 {
+  text-align: center;
+  display: none; }
+  @media screen and (max-width: 1024px) {
+    #MoreProducts .all2 {
+      display: block; } }
 #MoreProducts .h2 {
   display: inline-block; }
 #MoreProducts .h3, #MoreProducts .h4 {
   color: fff; }
 #MoreProducts .three {
-  padding: 30px 0 60px 0;
+  padding: 30px 0 30px 0;
   max-width: 1400px;
   font-size: 0;
   text-align: justify; }
@@ -428,6 +512,9 @@ p, .p {
       background-color: #ff3f3d; }
       #MoreProducts .three .product:hover .listinginfo h1, #MoreProducts .three .product:hover .listinginfo h2 {
         color: #fff; }
+    @media screen and (max-width: 1024px) {
+      #MoreProducts .three .product.gap {
+        display: none; } }
     #MoreProducts .three .product .imgouter {
       background-image: url("../images/redsolo01.jpg");
       background-size: cover;

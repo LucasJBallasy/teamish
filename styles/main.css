@@ -84,7 +84,8 @@ p, .p {
   height: 100%;
   max-width: 1600px;
   overflow: hidden;
-  background-color: #fff; }
+  background-color: #fff;
+  position: relative; }
 
 .btn {
   text-align: center;
@@ -109,6 +110,9 @@ p, .p {
   position: relative;
   -moz-box-sizing: border-box;
        box-sizing: border-box; }
+  @media screen and (max-width: 980px) {
+    .contentwrapper {
+      padding: 100px 50px; } }
   .contentwrapper .search {
     position: absolute;
     top: 50px;
@@ -148,14 +152,14 @@ p, .p {
   top: 0;
   height: 100%;
   z-index: 10; }
-  @media screen and (max-width: 640px) {
-    #MainNav {
-      position: absolute; } }
   #MainNav .logo {
     width: 40px;
     height: 40px;
     border: 4px #ff3f3d solid;
     display: block; }
+  @media screen and (max-width: 980px) {
+    #MainNav {
+      display: none; } }
 
 #Nav {
   margin: 30px 0 0;
@@ -197,6 +201,94 @@ p, .p {
         -webkit-transform: translate3d(0, 0, 0);
                 transform: translate3d(0, 0, 0);
         opacity: 1; }
+
+#MobileNav {
+  z-index: 60;
+  width: 100%;
+  display: none;
+  position: absolute;
+  width: 100%;
+  display: none;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: transparent;
+  -webkit-transition: 0.5s ease;
+          transition: 0.5s ease; }
+  @media screen and (max-width: 980px) {
+    #MobileNav {
+      display: block; } }
+  #MobileNav .menubtn {
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    border: 4px #ff3f3d solid;
+    display: block;
+    z-index: 100; }
+  #MobileNav.open {
+    background: rgba(255, 63, 61, 0.9); }
+    #MobileNav.open #Nav2 {
+      opacity: 1;
+      pointer-events: auto; }
+
+.line {
+  position: absolute;
+  height: 4px;
+  width: auto;
+  background: #ff3f3d;
+  left: 5px;
+  right: 5px;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease; }
+
+.line-t {
+  top: 8px; }
+
+.line-m {
+  top: 18px; }
+
+.line-b {
+  top: 28px; }
+
+button:hover .line {
+  background: #999; }
+
+.menu-on .line-m, .menu-on:hover .line-m {
+  opacity: 0; }
+
+.menu-on .line {
+  background: #fff;
+  top: 19px; }
+
+.menu-on .line-t {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.menu-on .line-b {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+#Nav2 {
+  position: absolute;
+  z-index: 99;
+  text-align: center;
+  width: 100%;
+  padding: 100px 0;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+          transition: opacity 0.5s ease; }
+  #Nav2 .h1 {
+    margin-bottom: 10px; }
+    #Nav2 .h1 a {
+      color: #fff; }
 
 #HomeContainer {
   overflow: auto; }

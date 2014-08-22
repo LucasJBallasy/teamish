@@ -8,15 +8,15 @@
 	height:100%;
 	z-index:10;
 
-	@media screen and (max-width: $break-5) {
-		position:absolute;
-	}
-
 	.logo{
 		width:40px;
 		height:40px;
 		border: 4px $brand-color solid;
 		display:block;
+	}
+
+	@media screen and (max-width: $break-3) {
+		display:none;
 	}
 }
 
@@ -77,4 +77,103 @@
 			}
 		}
 	}
+}
+
+#MobileNav{
+	z-index:60;
+	width:100%;
+	display:none;
+	position: absolute;
+	width: 100%;
+	display: none;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: transparent;
+	transition: .5s ease;
+
+	@media screen and (max-width: $break-3) {
+		display:block;
+	}
+
+	.menubtn{
+		position:absolute;
+		top:25px;
+		left:50px;
+		width:40px;
+		height:40px;
+		border: 4px $brand-color solid;
+		display:block;
+		z-index:100;
+	}
+
+	&.open{
+		background: rgba($brand-color, .9);
+		#Nav2{
+			opacity:1;
+			pointer-events: auto;
+		}
+	}
+}
+
+.line{
+  position:absolute;
+  height:4px;
+  width:auto;
+  background:$brand-color;
+  left:5px;
+  right:5px;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+.line-t{
+  top:8px;
+}
+.line-m{
+  top:18px;
+}
+.line-b{
+  top:28px;
+}
+
+button:hover .line{
+  background:#999;
+}
+.menu-on .line-m, .menu-on:hover .line-m{
+  opacity:0;
+}
+.menu-on .line{
+	background:#fff;
+    top:19px;
+}
+.menu-on .line-t{
+	transform: rotate(45deg);
+}
+.menu-on .line-b{
+	transform: rotate(-45deg);
+}
+
+#Nav2{
+	position:absolute;
+	z-index:99;
+	text-align:center;
+	width:100%;
+	padding:100px 0;
+	box-sizing:border-box;
+	pointer-events: none;
+	opacity:0;
+	transition:opacity .5s ease;
+
+	.h1{
+		margin-bottom:10px;
+
+		a{
+			color:#fff;
+		}
+	}
+	
 }
