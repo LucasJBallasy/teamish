@@ -1,68 +1,62 @@
 #BuyList{
 	width:100%;
     display:inline-block;
-    margin:50px 0 25px 230px;
-  	max-width:1300px;
 }
 
 #ProductGrid{
 	margin-top:65px;
 	overflow:auto;
-}
 
-.saleproduct{
-	width:47%;
-	margin:0 0 45px;
-	vertical-align: top;
-	display: inline-block;
-	position: relative;
-	box-sizing:border-box;
-	overflow:auto;
+	li{
+		width:47%;
+		margin:0 0 45px;
+		vertical-align: top;
+		display: inline-block;
+		position: relative;
+		box-sizing:border-box;
+		overflow:auto;
 
-	&.left{
-		float:left;
-	}
-
-	&.right{
-		float:right;
-	}
-
-	&.top{
-		margin-top:180px;
-	}
-
-	&.small{
-		margin:15px 25px 30px;
-		width:20%;
-	}
-
-	&.topsmall{
-		margin-top:150px;
-	}
-
-	&.bottom{
-		margin-top:-100px;
-		margin-left:40%;
-		margin-bottom:100px;
-	}
-
-	&:hover{
-
-		.imgouter:after{
-			background-color:rgba($brand-color,.5);
+		&:nth-child(5n+1), &:nth-child(5n+3), &:nth-child(5n+4), &:nth-child(5n+5){
+			float:left;
 		}
 
-		.listinginfo{
-			background-color:$brand-color;
+		&:nth-child(5n+2){
+			float:right;
+			margin-top:180px;
+		}
 
-			h1, h2{
-				color:#fff;
+		&:nth-child(5n+3), &:nth-child(5n+4){
+		    margin:15px 25px 30px;
+			width:20%;
+		}
+
+		&:nth-child(5n+3){
+			margin-top:150px;
+		}
+
+		&:nth-child(5n+5){
+			margin-top:-100px;
+		    margin-left:40%;
+		    margin-bottom:100px;
+		}
+
+		&:hover{
+
+			.imgouter:after{
+				background-color:rgba($brand-color,.5);
+			}
+
+			.listinginfo{
+				background-color:$brand-color;
+
+				h1, h2{
+					color:#fff;
+				}
 			}
 		}
 	}
 
 	.imgouter{
-		background-image:url('../images/redsolo01.jpg');
 		background-size:cover;
 		background-position:center;
 		position:relative;
@@ -96,7 +90,8 @@
 		border:2px $brand-color solid;
 		transition:.5s ease;
 	}
-}	
+}
+
 
 .loadmore{
 	width:100%;

@@ -132,6 +132,10 @@ p, .p {
     border-bottom: 4px #ff3f3d solid;
     color: #fff; }
 
+.contentwrapper {
+  margin: 50px 0 0 230px;
+  max-width: 1300px; }
+
 .btn2 {
   text-align: center;
   padding: 10px 20px;
@@ -184,59 +188,53 @@ p, .p {
       #Nav li a:hover {
         border-bottom: 2px #ff3f3d solid; }
 
-#HomeContainer {
-  margin: 50px 0 0 230px;
-  max-width: 1300px;
+#HomeContainer .half {
+  text-align: center;
+  width: 48%;
+  background-color: yellow;
+  background-image: url("../images/barrelmoments01.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
   box-sizing: border-box; }
-  #HomeContainer .half {
-    text-align: center;
-    width: 48%;
-    background-color: yellow;
-    background-image: url("../images/barrelmoments01.jpg");
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    box-sizing: border-box; }
-    #HomeContainer .half.left {
-      margin: 0 1% 0 0;
-      float: left; }
-    #HomeContainer .half.right {
-      margin: 100px 0 0 1%;
-      float: right; }
-    #HomeContainer .half h1 {
-      z-index: 2;
-      position: absolute;
-      top: 40%;
-      left: 0;
-      right: 0;
-      color: #fff; }
-    #HomeContainer .half:before {
-      z-index: 3;
-      position: absolute;
-      top: 20px;
-      bottom: 20px;
-      right: 20px;
-      left: 20px;
-      content: '';
-      border: 2px #fff solid; }
-    #HomeContainer .half:after {
-      z-index: 1;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      content: '';
-      background-color: #ff3f3d;
-      opacity: .85; }
-  #HomeContainer span {
-    display: block;
-    padding-top: 100%; }
+  #HomeContainer .half.left {
+    margin: 0 1% 0 0;
+    float: left; }
+  #HomeContainer .half.right {
+    margin: 100px 0 0 1%;
+    float: right; }
+  #HomeContainer .half h1 {
+    z-index: 2;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    color: #fff; }
+  #HomeContainer .half:before {
+    z-index: 3;
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    content: '';
+    border: 2px #fff solid; }
+  #HomeContainer .half:after {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    content: '';
+    background-color: #ff3f3d;
+    opacity: .85; }
+#HomeContainer span {
+  display: block;
+  padding-top: 100%; }
 
 #ProductListing {
-  display: inline-block;
-  margin: 50px 0 0 230px;
-  max-width: 1300px; }
+  display: inline-block; }
 
 #Slideshow {
   max-width: 685px;
@@ -330,6 +328,12 @@ p, .p {
       vertical-align: top;
       display: inline-block;
       position: relative; }
+      #MoreProducts .three .product:hover .imgouter:after {
+        background-color: rgba(255, 63, 61, 0.5); }
+      #MoreProducts .three .product:hover .listinginfo {
+        background-color: #ff3f3d; }
+        #MoreProducts .three .product:hover .listinginfo h1, #MoreProducts .three .product:hover .listinginfo h2 {
+          color: #fff; }
       #MoreProducts .three .product .imgouter {
         background-image: url("../images/redsolo01.jpg");
         background-size: cover;
@@ -348,17 +352,6 @@ p, .p {
           right: 0;
           content: '';
           transition: .5s ease; }
-        #MoreProducts .three .product .imgouter:hover:after {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background-color: #ff3f3d;
-          content: '';
-          opacity: .8; }
       #MoreProducts .three .product .listinginfo {
         z-index: 3;
         position: relative;
@@ -366,13 +359,79 @@ p, .p {
         max-width: 80%;
         margin: -15px auto 0;
         text-align: center;
-        border: 2px #ff3f3d solid; }
+        border: 2px #ff3f3d solid;
+        transition: .5s ease; }
+
+#BuyList {
+  width: 100%;
+  display: inline-block; }
+
+#ProductGrid {
+  margin-top: 65px;
+  overflow: auto; }
+  #ProductGrid li {
+    width: 47%;
+    margin: 0 0 45px;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    overflow: auto; }
+    #ProductGrid li:nth-child(5n+1), #ProductGrid li:nth-child(5n+3), #ProductGrid li:nth-child(5n+4), #ProductGrid li:nth-child(5n+5) {
+      float: left; }
+    #ProductGrid li:nth-child(5n+2) {
+      float: right;
+      margin-top: 180px; }
+    #ProductGrid li:nth-child(5n+3), #ProductGrid li:nth-child(5n+4) {
+      margin: 15px 25px 30px;
+      width: 20%; }
+    #ProductGrid li:nth-child(5n+3) {
+      margin-top: 150px; }
+    #ProductGrid li:nth-child(5n+5) {
+      margin-top: -100px;
+      margin-left: 40%;
+      margin-bottom: 100px; }
+    #ProductGrid li:hover .imgouter:after {
+      background-color: rgba(255, 63, 61, 0.5); }
+    #ProductGrid li:hover .listinginfo {
+      background-color: #ff3f3d; }
+      #ProductGrid li:hover .listinginfo h1, #ProductGrid li:hover .listinginfo h2 {
+        color: #fff; }
+  #ProductGrid .imgouter {
+    background-size: cover;
+    background-position: center;
+    position: relative; }
+    #ProductGrid .imgouter span {
+      display: block;
+      padding-top: 100%; }
+    #ProductGrid .imgouter:after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      transition: .5s ease; }
+  #ProductGrid .listinginfo {
+    z-index: 3;
+    position: relative;
+    padding: 20px 10px;
+    max-width: 80%;
+    margin: -15px auto 0;
+    text-align: center;
+    border: 2px #ff3f3d solid;
+    transition: .5s ease; }
+
+.loadmore {
+  width: 100%;
+  padding: 0 0 50px;
+  text-align: center; }
 
 #BorrowList {
   width: 100%;
-  display: inline-block;
-  margin: 50px 0 0 230px;
-  max-width: 1300px; }
+  display: inline-block; }
 
 .accordion {
   border-bottom: 2px #ff3f3d solid;
@@ -593,98 +652,18 @@ textarea:focus, input:focus {
   border: 2px solid #e77154; }
 
 #Footer {
-  background-color: #666869;
-  padding: 40px 0 60px;
+  margin: 50px 0 0;
+  background-color: #ff3f3d;
+  padding: 40px 0 40px;
   overflow: auto;
   text-align: center;
   position: relative; }
-  @media screen and (max-width: 980px) {
-    #Footer {
-      padding: 40px 20px; } }
-  #Footer h1, #Footer p, #Footer a, #Footer ul {
-    font-family: SharpSansMedium, sans-serif;
-    font-size: 13px;
-    line-height: 1.45; }
-  #Footer p, #Footer li {
-    line-height: 1.65em; }
-    @media screen and (max-width: 450px) {
-      #Footer p, #Footer li {
-        line-height: 1.8em; } }
-  #Footer li, #Footer img {
-    transition: opacity .05s linear; }
-    #Footer li:hover, #Footer img:hover {
-      opacity: .5; }
-  #Footer .h3, #Footer h1 {
-    margin: 0 0 15px; }
+  #Footer img {
+    width: 50px;
+    transition: 1s ease; }
+    #Footer img:hover {
+      transform: rotate(360deg); }
   #Footer h1 {
-    border-top: 2px #fff solid;
-    padding: 10px 0 0; }
-    @media screen and (max-width: 450px) {
-      #Footer h1 {
-        display: inline-block;
-        padding-bottom: 5px;
-        border-top: none;
-        border-bottom: 2px #fff solid;
-        border-width: auto; } }
-  #Footer .column {
-    vertical-align: top;
-    box-sizing: border-box; }
-  #Footer .center {
-    width: 760px;
-    margin: 0 auto;
-    display: inline-block;
-    height: 150px; }
-    @media screen and (max-width: 1200px) {
-      #Footer .center {
-        margin: 50px 0;
-        width: 100%;
-        box-sizing: border-box; } }
-    @media screen and (max-width: 768px) {
-      #Footer .center {
-        height: 300px; } }
-    @media screen and (max-width: 450px) {
-      #Footer .center {
-        height: auto; } }
-    #Footer .center .inner {
-      padding: 0 20px 0;
-      width: 25%;
-      text-align: left;
-      height: 100px;
-      float: left; }
-      @media screen and (max-width: 768px) {
-        #Footer .center .inner {
-          height: 150px;
-          margin: 0 0 20px;
-          width: 50%; } }
-      @media screen and (max-width: 450px) {
-        #Footer .center .inner {
-          padding: 0;
-          width: 100%;
-          text-align: center;
-          height: auto; } }
-  #Footer .left {
-    float: left;
-    position: absolute;
-    top: 40px;
-    left: 40px; }
-    @media screen and (max-width: 1200px) {
-      #Footer .left {
-        position: relative;
-        top: 0;
-        left: 0;
-        float: none;
-        width: 100%; } }
-  #Footer .right {
-    float: right;
-    position: absolute;
-    top: 40px;
-    right: 40px; }
-    @media screen and (max-width: 1200px) {
-      #Footer .right {
-        position: relative;
-        top: 0;
-        right: 0;
-        float: none;
-        width: 100%; } }
-    #Footer .right img {
-      width: 120px; }
+    color: #fff; }
+    #Footer h1 .copyright {
+      font-size: 20px; }
