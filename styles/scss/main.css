@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, li, a, .h1, .h2, .h3, .h4, .h5 {
 
 h1, .h1 {
   font-size: 42px;
-  line-height: 1em; }
+  line-height: 1.25em; }
 
 h2, .h2 {
   font-size: 25px;
@@ -124,7 +124,7 @@ p, .p {
   box-sizing: border-box; }
   @media screen and (max-width: 980px) {
     .contentwrapper {
-      padding: 100px 50px; } }
+      padding: 125px 50px 0; } }
   .contentwrapper .search {
     position: absolute;
     top: 50px;
@@ -162,13 +162,6 @@ p, .p {
   top: 0;
   height: 100%;
   z-index: 10; }
-  #MainNav .icons {
-    transition: 1s ease; }
-    #MainNav .icons img {
-      width: 100px;
-      position: absolute; }
-    #MainNav .icons:hover {
-      transform: translate(360deg); }
   #MainNav .logo {
     padding: 10px;
     border: 3px #ff3f3d solid;
@@ -219,7 +212,6 @@ p, .p {
         opacity: 1; }
 
 #MobileNav {
-  z-index: 60;
   width: 100%;
   display: none;
   position: absolute;
@@ -234,17 +226,31 @@ p, .p {
   @media screen and (max-width: 980px) {
     #MobileNav {
       display: block; } }
-  #MobileNav .menubtn {
+  #MobileNav .logo2 {
+    z-index: 100;
+    padding: 10px;
+    border: 3px #ff3f3d solid;
+    display: block;
+    box-shadow: -3px 3px 0px #ff3f3d;
     position: absolute;
     top: 25px;
-    left: 50px;
+    left: 50px; }
+    #MobileNav .logo2:hover {
+      box-shadow: 0 0 0 #fff;
+      margin: 3px -3px 0; }
+  #MobileNav .menubtn {
+    position: absolute;
+    top: 30px;
+    right: 50px;
     width: 40px;
     height: 40px;
-    border: 4px #ff3f3d solid;
     display: block;
     z-index: 100; }
   #MobileNav.open {
-    background: rgba(255, 63, 61, 0.9); }
+    z-index: 60;
+    background: rgba(255, 63, 61, 0.9);
+    opacity: 1;
+    pointer-events: auto; }
     #MobileNav.open #Nav2 {
       opacity: 1;
       pointer-events: auto; }
@@ -303,51 +309,19 @@ button:hover .line {
       color: #fff; }
 
 #HomeContainer {
-  overflow: auto; }
-  #HomeContainer .half {
-    text-align: center;
-    width: 48%;
-    background-color: yellow;
-    background-image: url("../images/barrelmoments01.jpg");
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    box-sizing: border-box; }
-    #HomeContainer .half.left {
-      margin: 0 1% 0 0;
-      float: left; }
-    #HomeContainer .half.right {
-      margin: 100px 0 0 1%;
-      float: right; }
-    #HomeContainer .half h1 {
-      z-index: 2;
-      position: absolute;
-      top: 40%;
-      left: 0;
-      right: 0;
-      color: #fff; }
-    #HomeContainer .half:before {
-      z-index: 3;
-      position: absolute;
-      top: 20px;
-      bottom: 20px;
-      right: 20px;
-      left: 20px;
-      content: '';
-      border: 2px #fff solid; }
-    #HomeContainer .half:after {
-      z-index: 1;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      content: '';
-      background-color: #ff3f3d;
-      opacity: .85; }
-  #HomeContainer span {
-    display: block;
-    padding-top: 100%; }
+  overflow: auto;
+  text-align: center; }
+  #HomeContainer .icons img {
+    width: 300px; }
+  #HomeContainer .hometitle {
+    display: inline-block;
+    width: 50%;
+    margin: 0 0 50px;
+    text-align: left; }
+    #HomeContainer .hometitle a {
+      border-bottom: 3px #ff3f3d solid; }
+      #HomeContainer .hometitle a:hover {
+        border-bottom: 3px #ff3f3d dashed; }
 
 #ProductListing {
   display: inline-block;
@@ -650,76 +624,58 @@ button:hover .line {
 
 .accordion {
   border-bottom: 2px #ff3f3d solid;
-  margin: 65px 0; }
+  margin: 40px 0; }
   .accordion dt {
     border-top: 2px #ff3f3d solid;
-    background-size: cover;
-    background-position: center;
-    overflow: auto;
     position: relative; }
     .accordion dt a {
       display: block;
-      padding: 50px 0;
-      min-height: 70px;
+      padding: 50px 40px;
       transition: background-color .15s ease;
       transition: .5s ease; }
-      @media screen and (max-width: 640px) {
-        .accordion dt a {
-          padding-bottom: 35px; } }
-      @media screen and (max-width: 450px) {
-        .accordion dt a {
-          padding-bottom: 30px; } }
       .accordion dt a.red {
         background-color: #ff3f3d; }
         .accordion dt a.red:hover {
-          padding: 50px 0; }
+          padding: 50px 40px; }
         .accordion dt a.red .h1, .accordion dt a.red .h2 {
           color: #fff; }
       .accordion dt a:hover {
         background-color: #ff3f3d;
-        padding: 60px 0; }
-        .accordion dt a:hover .h1, .accordion dt a:hover .h2, .accordion dt a:hover h3 {
+        padding: 60px 40px; }
+        .accordion dt a:hover .h1, .accordion dt a:hover .h2, .accordion dt a:hover .arrow {
+          color: #fff; }
+      .accordion dt a .arrow {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        font-size: 40px;
+        text-align: center;
+        height: 40px;
+        width: 40px;
+        display: inline-block;
+        transform: rotate(0);
+        transition: transform .5s ease; }
+        @media screen and (max-width: 980px) {
+          .accordion dt a .arrow {
+            margin-top: 15px; } }
+        @media screen and (max-width: 640px) {
+          .accordion dt a .arrow {
+            padding: 0; } }
+        .accordion dt a .arrow.flip {
+          transform: rotate(180deg);
           color: #fff; }
     .accordion dt .info {
       z-index: 2;
-      position: absolute;
-      left: 40px;
-      right: 40px;
+      position: relative;
       transition: opacity 1s ease; }
-      @media screen and (max-width: 768px) {
-        .accordion dt .info {
-          left: 20px;
-          right: 20px; } }
       @media screen and (max-width: 640px) {
         .accordion dt .info {
-          text-align: center;
-          left: 0;
-          right: 0; } }
+          text-align: center; } }
       .accordion dt .info.dim {
         opacity: .4; }
       .accordion dt .info h1, .accordion dt .info h2 {
-        text-transform: capitalize; }
-      .accordion dt .info h2 {
-        float: left; }
-      .accordion dt .info h3 {
-        float: right;
-        position: relative;
-        margin-top: 5px;
-        font-size: 40px;
-        transform: rotate(0);
-        transition: transform .5s ease;
-        text-align: center;
-        height: 40px;
-        width: 40px; }
-        @media screen and (max-width: 980px) {
-          .accordion dt .info h3 {
-            margin-top: 15px; } }
-        @media screen and (max-width: 640px) {
-          .accordion dt .info h3 {
-            padding: 0; } }
-        .accordion dt .info h3.flip {
-          transform: rotate(180deg);
-          color: #fff; }
+        text-transform: capitalize;
+        max-width: 80%; }
       @media screen and (max-width: 640px) {
         .accordion dt .info h2, .accordion dt .info h3 {
           float: none; } }
